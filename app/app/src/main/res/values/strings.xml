@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">分享足迹</string>
+    <string name="server_ip">192.168.31.223</string>
+    <string name="server_port">3000</string>
+    <string name="title_activity_photo_fullscreen">PhotoFullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

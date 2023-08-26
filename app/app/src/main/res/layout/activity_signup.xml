@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".ui.login.SignupActivity">
+
+    <EditText
+        android:id="@+id/edit_id"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/translucent_edit"
+        android:ems="10"
+        android:hint="输入用户名"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_pwd"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_id"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/translucent_edit"
+        android:ems="10"
+        android:hint="输入密码"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edit_pwd_r"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_pwd"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/translucent_edit"
+        android:ems="10"
+        android:hint="再次输入密码"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/translucent_button"
+            android:text="提交" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path path="DCIM" name="external_files"/>
+</paths>
+
+
+<!--    Android之FileProvider详解-->
+<!--    https://juejin.cn/post/7009204672225345549-->
+
+<!--    /**-->
+<!--    * Android 7.0之前，文件的Uri以file:///形式提供给其他app访问。-->
+<!--    * Android 7.0之后，分享文件的Uri发生了变化。为了安全起见，file:///形式的Uri不能正常访问。官方提供了FileProvider，FileProvider生成的Uri会以content://的形式分享给其他app使用。-->
+<!--    * content形式的Uri可以让其他app临时获得读取(Read)和写入(Write)权限，只要我们在创建Intent时，使用Intent.setFlags()添加权限。只要接收Uri的app在接收的Activity任务栈中处于活动状态，添加的权限就会一直有效，直到app被任务栈移除。-->
+<!--    */-->

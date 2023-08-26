@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/translucent_edit"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemTextView_title"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_weight="3"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="寻找沙漠中的生命"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/itemTextView_id"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:text="admin"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/itemTextView_datetime"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:text="2023-07-25 11:27:49"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/itemImageView"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1.8"
+            android:contentDescription="Item Image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_head" />
+
+    </LinearLayout>
+</LinearLayout>

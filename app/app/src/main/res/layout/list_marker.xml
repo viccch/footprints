@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/translucent_edit"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/itemTextView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="test_title"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/itemTextView_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="test_1_description;test_1_description;test_1_description;test_1_description;test_1_description;test_1_description;test_1_description\ntest_1_description" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/itemTextView_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2023-07-25 11:27:49"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/itemTextView_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="北纬：31.123，东经：117.230"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/itemTextView_altitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="海拔：123m"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mimes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/itemImageView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="200dp"-->
+    <!--        android:scaleType="centerCrop"-->
+    <!--        android:src="@drawable/user_head" />-->
+</LinearLayout>

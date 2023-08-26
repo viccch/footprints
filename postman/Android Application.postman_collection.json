@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "59f35d03-9f22-4a90-8cc8-7aa981f9839f",
+		"name": "Android Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "server root test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}",
+					"host": [
+						"{{Server}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/query_user?user_id=admin",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"query_user"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/insert_user?user_id=&user_password=4",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"insert_user"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": ""
+						},
+						{
+							"key": "user_password",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query blog all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/query_blog_all",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"query_blog_all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query blog by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/query_blog?user_id=admin",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"query_blog"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert blog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/insert_blog?blog_user_id=a&blog_title=1&blog_content=1&blog_resources=",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"insert_blog"
+					],
+					"query": [
+						{
+							"key": "blog_user_id",
+							"value": "a"
+						},
+						{
+							"key": "blog_title",
+							"value": "1"
+						},
+						{
+							"key": "blog_content",
+							"value": "1"
+						},
+						{
+							"key": "blog_resources",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove blog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/remove_blog?id=1",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"remove_blog"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert subscribe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/insert_subscribe?user_id=&user_subscribe=4",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"insert_subscribe"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": ""
+						},
+						{
+							"key": "user_subscribe",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query subscribe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/query_subscribe?user_id=admin",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"query_subscribe"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove subscribe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/insert_subscribe?user_id=admin&user_subscribe=viccch",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"insert_subscribe"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "admin"
+						},
+						{
+							"key": "user_subscribe",
+							"value": "viccch"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload file",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "project_id",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/viccch/Pictures/pic/1.bmp"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Server}}/upload_file",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"upload_file"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Server",
+			"value": ""
+		}
+	]
+}
