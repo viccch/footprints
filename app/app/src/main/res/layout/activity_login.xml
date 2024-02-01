@@ -45,6 +45,7 @@
             android:inputType="text"
             android:text=""
             android:textAlignment="center" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -69,10 +70,41 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/list3"
+        android:id="@+id/list_ip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/list2"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_ip"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/translucent_edit"
+            android:ems="10"
+            android:hint="Server IP"
+            android:text=""
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/et_port"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:background="@drawable/translucent_edit"
+            android:ems="10"
+            android:hint="Port"
+            android:text="3000"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_ip"
         android:layout_margin="20dp"
         android:gravity="center"
         android:orientation="horizontal">

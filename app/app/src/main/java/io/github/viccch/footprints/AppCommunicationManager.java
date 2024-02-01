@@ -24,7 +24,6 @@ import okhttp3.Response;
 
 public class AppCommunicationManager {
 
-    public static final String ServerUrl = APP.getInstance().getServerUrl();
 
     //上传文件
     public static void PublishBlog(String blog_user_id, String blog_title, String blog_content) {
@@ -32,7 +31,7 @@ public class AppCommunicationManager {
         OkHttpClient client = new OkHttpClient();
 
         HttpUrl.Builder queryUrlBuilder =
-                HttpUrl.get(ServerUrl + "/insert_blog")
+                HttpUrl.get(APP.getInstance().getServerUrl() + "/insert_blog")
                         .newBuilder()
                         .addQueryParameter("blog_user_id", blog_user_id)
                         .addQueryParameter("blog_title", blog_title)
@@ -68,7 +67,7 @@ public class AppCommunicationManager {
             File fp = new File(FileUtils.getFilePathByUri(APP.getInstance().getApplicationContext(), uri));
             String result = AppCommunicationManager.UploadFile(fp);
             JSONObject jsonObject = new JSONObject(result);
-            url = APP.getInstance().getServerUrl() + jsonObject.getJSONObject("data").getString("url");
+            url = jsonObject.getJSONObject("data").getString("url");
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
@@ -86,7 +85,7 @@ public class AppCommunicationManager {
 
         OkHttpClient client = new OkHttpClient();
 
-        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(ServerUrl + "/query_blog").newBuilder();
+        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(APP.getInstance().getServerUrl() + "/query_blog").newBuilder();
         queryUrlBuilder.addQueryParameter("user_id", user_id);
 
         Request request = new Request.Builder()
@@ -120,7 +119,7 @@ public class AppCommunicationManager {
 
         OkHttpClient client = new OkHttpClient();
 
-        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(ServerUrl + "/query_blog_all").newBuilder();
+        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(APP.getInstance().getServerUrl() + "/query_blog_all").newBuilder();
 
         Request request = new Request.Builder()
                 .url(queryUrlBuilder.build())
@@ -149,7 +148,7 @@ public class AppCommunicationManager {
 
         OkHttpClient client = new OkHttpClient();
 
-        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(ServerUrl + "/insert_user").newBuilder();
+        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(APP.getInstance().getServerUrl() + "/insert_user").newBuilder();
         queryUrlBuilder.addQueryParameter("user_id", info.getUser_id());
         queryUrlBuilder.addQueryParameter("user_password", info.getUser_password());
 
@@ -179,7 +178,7 @@ public class AppCommunicationManager {
 
         OkHttpClient client = new OkHttpClient();
 
-        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(ServerUrl + "/remove_blog").newBuilder();
+        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(APP.getInstance().getServerUrl() + "/remove_blog").newBuilder();
         queryUrlBuilder.addQueryParameter("id", id);
 
         Request request = new Request.Builder()
@@ -207,7 +206,7 @@ public class AppCommunicationManager {
 
         OkHttpClient client = new OkHttpClient();
 
-        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(ServerUrl + "/remove_subscribe").newBuilder();
+        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(APP.getInstance().getServerUrl() + "/remove_subscribe").newBuilder();
         queryUrlBuilder.addQueryParameter("user_id", my_id);
         queryUrlBuilder.addQueryParameter("user_subscribe", other_id);
 
@@ -236,7 +235,7 @@ public class AppCommunicationManager {
 
         OkHttpClient client = new OkHttpClient();
 
-        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(ServerUrl + "/insert_subscribe").newBuilder();
+        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(APP.getInstance().getServerUrl() + "/insert_subscribe").newBuilder();
         queryUrlBuilder.addQueryParameter("user_id", my_id);
         queryUrlBuilder.addQueryParameter("user_subscribe", other_id);
 
@@ -267,7 +266,7 @@ public class AppCommunicationManager {
 
         OkHttpClient client = new OkHttpClient();
 
-        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(ServerUrl + "/query_subscribe").newBuilder();
+        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(APP.getInstance().getServerUrl() + "/query_subscribe").newBuilder();
         queryUrlBuilder.addQueryParameter("user_id", user_id);
 
         Request request = new Request.Builder()
@@ -303,7 +302,7 @@ public class AppCommunicationManager {
 
         OkHttpClient client = new OkHttpClient();
 
-        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(ServerUrl + "/query_user").newBuilder();
+        HttpUrl.Builder queryUrlBuilder = HttpUrl.get(APP.getInstance().getServerUrl() + "/query_user").newBuilder();
         queryUrlBuilder.addQueryParameter("user_id", user_id);
 
         Request request = new Request.Builder()
@@ -340,14 +339,14 @@ public class AppCommunicationManager {
         //创建MultiparBody,给RequestBody进行设置
         MultipartBody multipartBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
-                .addFormDataPart("user_id", "admin")
+                .addFormDataPart("user_id", APP.getInstance().getUser().getUser_id())
                 .addFormDataPart("project_id", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd")))
                 .addFormDataPart("file", fp.getName(), fileBody)
                 .build();
 
         //创建Request
         Request request = new Request.Builder()
-                .url(ServerUrl + "/upload_file")
+                .url(APP.getInstance().getServerUrl() + "/upload_file")
                 .post(multipartBody)
                 .build();
 

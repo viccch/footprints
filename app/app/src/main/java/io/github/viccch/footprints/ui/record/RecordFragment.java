@@ -337,7 +337,7 @@ public class RecordFragment
                                 blog.blog_content = new Blog.Content();
                                 blog.blog_content.seconds = seconds;
                                 blog.blog_content.start_time = start_time;
-                                blog.blog_content.head_image_url = "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg";
+                                blog.blog_content.head_image_url = "/res/admin/test/eg_tulip.jpg";
                                 blog.blog_content.location = start_point_location.getProvince() + " " + start_point_location.getCity() + " " + start_point_location.getDistrict();
                                 blog.blog_content.distance = distance;
 

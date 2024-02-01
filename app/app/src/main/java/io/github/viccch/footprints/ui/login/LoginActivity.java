@@ -30,10 +30,16 @@ public class LoginActivity extends AppCompatActivity {
     EditText et_id;
     EditText et_pwd;
 
+    EditText et_ip;
+    EditText et_port;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        et_ip = findViewById(R.id.et_ip);
+        et_port = findViewById(R.id.et_port);
 
         et_id = findViewById(R.id.et_id);
         et_pwd = findViewById(R.id.et_pwd);
@@ -48,6 +54,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     void login() {
+
+        APP.getInstance().ip = et_ip.getText().toString().trim();
+        APP.getInstance().port = et_port.getText().toString().trim();
 
         if (et_id.getText().toString().length() == 0) {
             Toast.makeText(this, "请填写用户名！", Toast.LENGTH_SHORT).show();
@@ -87,11 +96,16 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sp.edit();
         editor.putString("user_id", userInfo.getUser_id());
         editor.putString("user_password", userInfo.getUser_password());
+
+        editor.putString("server_ip",APP.getInstance().ip);
+        editor.putString("server_port",APP.getInstance().port);
+
         editor.apply();
 //        editor.commit();
     }
 
     boolean verify(UserInfo info) {
+
         boolean verify_flag = false;
         //登录验证
         try {
@@ -120,8 +134,15 @@ public class LoginActivity extends AppCompatActivity {
     void pre_verify() {
         //获取本地存储的账号密码尝试登录
         SharedPreferences sp = getSharedPreferences("user", Context.MODE_PRIVATE);
+
         String user_id = sp.getString("user_id", null);
         String user_password = sp.getString("user_password", null);
+
+        String server_ip = sp.getString("server_ip",null);
+        String server_port = sp.getString("server_port",null);
+
+        APP.getInstance().ip = sp.getString("server_ip",null);
+        APP.getInstance().port = sp.getString("server_port",null);
 
         UserInfo info = new UserInfo();
         info.setUser_id(user_id);
@@ -135,8 +156,10 @@ public class LoginActivity extends AppCompatActivity {
             save(info);//保存账号密码
             entry();
         } else {
-            et_id.setText(info.getUser_id());
-            et_pwd.setText(info.getUser_password());
+            et_id.setText(user_id);
+            et_pwd.setText(user_password);
+            et_ip.setText(server_ip);
+            et_port.setText(server_port);
         }
     }
 }

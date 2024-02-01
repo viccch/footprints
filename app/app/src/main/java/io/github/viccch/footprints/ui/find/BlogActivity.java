@@ -255,7 +255,7 @@ public class BlogActivity extends AppCompatActivity {
                         if (mime_item.type.equals(Blog.Content.Marker.MIME_Item.ContentType.TYPE_IMAGE.value)) {
                             ((ViewGroup) v.findViewById(R.id.mimes)).addView(imageView_parser(mime_item.url));
                         } else if (mime_item.type.equals(Blog.Content.Marker.MIME_Item.ContentType.TYPE_VIDEO.value)) {
-                            ((ViewGroup) v.findViewById(R.id.mimes)).addView(videoView_parser(mime_item.url));
+                            ((ViewGroup) v.findViewById(R.id.mimes)).addView(videoView_parser( mime_item.url));
                         }
                     }
                 }
@@ -275,7 +275,8 @@ public class BlogActivity extends AppCompatActivity {
         return textView;
     }
 
-    ImageView imageView_parser(String url) {
+    ImageView imageView_parser(String t_url) {
+        String url = APP.getInstance().getServerUrl() + t_url;
 
         ImageView imageView = (ImageView) LayoutInflater.from(this).inflate(R.layout.list_blog_imageview_layout, linearLayout, false);
 
@@ -291,7 +292,8 @@ public class BlogActivity extends AppCompatActivity {
         return imageView;
     }
 
-    PlayerView videoView_parser(String url) {
+    PlayerView videoView_parser(String t_url) {
+        String url = APP.getInstance().getServerUrl() + t_url;
 
 //        String videoPath = "http://vfx.mtime.cn/Video/2019/07/12/mp4/190712140656051701.mp4";
         PlayerView playerView = (PlayerView) LayoutInflater.from(this).inflate(R.layout.list_blog_playerview_layout, linearLayout, false);

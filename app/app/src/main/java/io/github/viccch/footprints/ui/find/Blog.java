@@ -9,6 +9,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import io.github.viccch.footprints.APP;
+
 public class Blog {
     public int id;
     public String blog_time;

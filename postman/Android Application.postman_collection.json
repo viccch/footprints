@@ -115,7 +115,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{Server}}/insert_blog?blog_user_id=a&blog_title=1&blog_content=1&blog_resources=",
+					"raw": "{{Server}}/insert_blog?blog_user_id=a&blog_title=1&blog_content=",
 					"host": [
 						"{{Server}}"
 					],
@@ -134,10 +134,6 @@
 						{
 							"key": "blog_content",
 							"value": "1"
-						},
-						{
-							"key": "blog_resources",
-							"value": ""
 						}
 					]
 				}

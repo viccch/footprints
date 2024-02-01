@@ -17,6 +17,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.github.viccch.footprints.APP;
 import io.github.viccch.footprints.R;
 
 public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.ViewHolder> {
@@ -43,7 +44,7 @@ public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Blog blog = blogList.get(position);
-        Glide.with(context).load(blog.blog_content.head_image_url).placeholder(R.drawable.baseline_broken_image_24).into(holder.itemImageView);
+        Glide.with(context).load(APP.getInstance().getServerUrl() + blog.blog_content.head_image_url).placeholder(R.drawable.baseline_broken_image_24).into(holder.itemImageView);
         holder.itemTextView_title.setText(blog.blog_title);
         holder.itemTextView_id.setText(blog.blog_user_id);
         holder.itemTextView_datetime.setText(blog.blog_time);

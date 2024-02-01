@@ -8,6 +8,9 @@ public class APP extends Application {
     private UserInfo user;
     private static APP instance;
 
+    public String ip="";
+    public String port="";
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -30,7 +33,8 @@ public class APP extends Application {
     }
 
     public String getServerUrl() {
-        return "http://" + getString(R.string.server_ip) + ":" + getString(R.string.server_port);
+//        return "http://" + "192.168.31.22" + ":" +"3000";
+        return "http://" + ip + ":" +port;
     }
 
 //    // 创建服务用于捕获崩溃异常

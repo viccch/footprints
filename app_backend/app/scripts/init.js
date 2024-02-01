@@ -16,7 +16,7 @@ var test_data = {
             "blog_user_id": "viccch",
             "blog_title": "test__1",
             "blog_content": {
-                "head_image_url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg",
+                "head_image_url": "/res/admin/test/eg_tulip.jpg",
                 "start_time": "2023-08-14 17:57:30",
                 "seconds": 110,
                 "location":"河南省 南阳市 内乡县",
@@ -34,11 +34,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             },
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             }
                         ]
                     },
@@ -54,11 +54,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             },
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             }
                         ]
                     }
@@ -92,7 +92,7 @@ var test_data = {
             "blog_user_id": "viccch",
             "blog_title": "test__1",
             "blog_content": {
-                "head_image_url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg",
+                "head_image_url": "/res/admin/test/eg_tulip.jpg",
                 "start_time": "2023-08-14 17:57:30",
                 "seconds": 110,
                 "location":"河南省 南阳市 内乡县",
@@ -110,11 +110,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             },
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             }
                         ]
                     },
@@ -130,11 +130,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             },
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             }
                         ]
                     }
@@ -167,7 +167,7 @@ var test_data = {
             "blog_user_id": "viccch",
             "blog_title": "test__1",
             "blog_content": {
-                "head_image_url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg",
+                "head_image_url": "/res/admin/test/eg_tulip.jpg",
                 "start_time": "2023-08-14 17:57:30",
                 "seconds": 110,
                 "location":"河南省 南阳市 内乡县",
@@ -185,11 +185,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             },
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             }
                         ]
                     },
@@ -205,11 +205,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             },
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             }
                         ]
                     }
@@ -243,7 +243,7 @@ var test_data = {
             "blog_user_id": "viccch",
             "blog_title": "test__1",
             "blog_content": {
-                "head_image_url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg",
+                "head_image_url": "/res/admin/test/eg_tulip.jpg",
                 "start_time": "2023-08-14 17:57:30",
                 "seconds": 110,
                 "location":"河南省 南阳市 内乡县",
@@ -261,11 +261,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             },
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             }
                         ]
                     },
@@ -281,11 +281,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             },
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             }
                         ]
                     }
@@ -318,7 +318,7 @@ var test_data = {
             "blog_user_id": "viccch",
             "blog_title": "test__1",
             "blog_content": {
-                "head_image_url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg",
+                "head_image_url": "/res/admin/test/eg_tulip.jpg",
                 "start_time": "2023-08-14 17:57:30",
                 "seconds": 110,
                 "location":"河南省 南阳市 内乡县",
@@ -336,11 +336,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             },
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             }
                         ]
                     },
@@ -356,11 +356,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             },
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             }
                         ]
                     }
@@ -394,7 +394,7 @@ var test_data = {
             "blog_user_id": "admin",
             "blog_title": "test__1",
             "blog_content": {
-                "head_image_url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg",
+                "head_image_url": "/res/admin/test/eg_tulip.jpg",
                 "start_time": "2023-08-14 17:57:30",
                 "seconds": 110,
                 "location":"河南省 南阳市 内乡县",
@@ -412,11 +412,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             },
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             }
                         ]
                     },
@@ -432,11 +432,11 @@ var test_data = {
                         "mime_items": [
                             {
                                 "type": "image/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/eg_tulip.jpg"
+                                "url": "/res/admin/test/eg_tulip.jpg"
                             },
                             {
                                 "type": "video/*",
-                                "url": "http://192.168.31.223:3000/res/admin/test/movie1.mp4"
+                                "url": "/res/admin/test/movie1.mp4"
                             }
                         ]
                     }
